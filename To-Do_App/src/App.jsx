@@ -20,7 +20,7 @@ function App() {
 
     const fetchData = () => {
       axios
-        .get("http://localhost:5000/todos")
+        .get("https://todo-rest-b40p.onrender.com/todos")
         .then((res) => {
           console.log(res.data);
           setTodos(res.data);
@@ -80,7 +80,7 @@ function App() {
       };
 
       axios
-        .post("http://localhost:5000/todos", newTodo)
+        .post("https://todo-rest-b40p.onrender.com/todos", newTodo)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     }
@@ -89,7 +89,7 @@ function App() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/todos/${id}`)
+      .delete(`https://todo-rest-b40p.onrender.com/todos/${id}`)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
