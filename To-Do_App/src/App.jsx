@@ -100,6 +100,7 @@ function App() {
 
   return (
     <div className="main">
+      <h1 className="heading">Another New Todo App</h1>
       <div className="leftPart">
         <div className="quote-box">
           <h1>{quote.content}</h1>

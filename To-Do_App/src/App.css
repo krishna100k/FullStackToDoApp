@@ -13,10 +13,12 @@ html {
 
 .main{
   display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
 .leftPart {
-  width: 50%;
+  width: 100%;
   height: 100vh;
   background-color: white;
   display: flex;
@@ -107,7 +109,7 @@ html {
 
 .rightPart {
   background-color: #5F5C5C;
-  width: 50%;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -164,40 +166,29 @@ html {
   overflow: scroll;
   overflow-x: hidden;
   width: 100%;
-  height: 50%;
+  height: 100%;
 }
 
 .above-right::-webkit-scrollbar{
   display: none;
 }
 
-@media only screen and (max-width: 1208px) {
-
-  .main{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .leftPart{
-    width: 100%;
-  }
-
-  .rightPart{
-    width: 100%;
-  }
-
-  .above-right{
-    height: 100%;
-  }
+.heading {
+  background-color: white;
+  text-align: center;
+  color: black;
+  padding-top: 100px ;
+  font-weight: bold;
 }
 
+
+
 .modal{
-  z-index: 1;
   position: absolute;
-  top: 0px;
+  z-index: 1;
+  top: 117%;
   right: 0%;
-  width: 50%;
+  width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
