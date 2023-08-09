@@ -13,7 +13,7 @@ function App() {
     const getQuote = () => {
       axios.get("https://type.fit/api/quotes").then((response) => {
         console.log(response.data);
-        setQuote(response.data[0].text);
+        setQuote(response.data);
       });
     };
     getQuote();
@@ -105,7 +105,7 @@ function App() {
       <h1 className="heading">Another New Todo App</h1>
       <div className="leftPart">
         <div className="quote-box">
-          <h1>{quote}</h1>
+          <h1>{quote[randomNumber].text}</h1>
         </div>
         <form className="form" action="POST">
           <div className="inputs">
