@@ -9,11 +9,13 @@ function App() {
   const [quote, setQuote] = useState([]);
   const [modalStyle, setModalStyle] = useState({ visibility: "hidden" });
 
+  const randomNumber = Math.floor(Math.random()*15);
+  
   useEffect(() => {
     const getQuote = () => {
       axios.get("https://type.fit/api/quotes").then((response) => {
         console.log(response.data);
-        setQuote(response.data);
+        setQuote(response.data[randomNumber].text);
       });
     };
     getQuote();
@@ -98,14 +100,14 @@ function App() {
     setModalStyle({ visibility: "visible" });
   };
 
-  const randomNumber = Math.floor(Math.random()*15);
+
 
   return (
     <div className="main">
       <h1 className="heading">Another New Todo App</h1>
       <div className="leftPart">
         <div className="quote-box">
-          <h1>{quote[randomNumber].text}</h1>
+          <h1>{quote}</h1>
         </div>
         <form className="form" action="POST">
           <div className="inputs">
