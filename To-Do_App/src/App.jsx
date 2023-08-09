@@ -11,9 +11,9 @@ function App() {
 
   useEffect(() => {
     const getQuote = () => {
-      axios.get("https://zenquotes.io/api/random").then((response) => {
+      axios.get("https://type.fit/api/quotes").then((response) => {
         console.log(response.data);
-        setQuote(response.data[0].q);
+        setQuote(response.data[0].text);
       });
     };
     getQuote();
