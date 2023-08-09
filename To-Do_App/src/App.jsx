@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const getQuote = () => {
-      axios.get("https://api.quotable.io/random").then((response) => {
+      axios.get("https://type.fit/api/quotes").then((response) => {
         console.log(response.data);
         setQuote(response.data);
       });
@@ -103,7 +103,7 @@ function App() {
       <h1 className="heading">Another New Todo App</h1>
       <div className="leftPart">
         <div className="quote-box">
-          <h1>{quote.content}</h1>
+          <h1>{quote.text}</h1>
         </div>
         <form className="form" action="POST">
           <div className="inputs">
