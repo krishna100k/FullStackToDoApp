@@ -98,12 +98,14 @@ function App() {
     setModalStyle({ visibility: "visible" });
   };
 
+  const randomNumber = Math.floor(Math.random()*15);
+
   return (
     <div className="main">
       <h1 className="heading">Another New Todo App</h1>
       <div className="leftPart">
         <div className="quote-box">
-          <h1>{quote.text}</h1>
+          <h1>{quote[randomNumber].text}</h1>
         </div>
         <form className="form" action="POST">
           <div className="inputs">
