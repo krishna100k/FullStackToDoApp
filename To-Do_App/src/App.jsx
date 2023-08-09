@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [todos, setTodos] = useState([]);
-  const [quote, setQuote] = useState([);
+  const [quote, setQuote] = useState([]);
   const [modalStyle, setModalStyle] = useState({ visibility: "hidden" });
 
   useEffect(() => {
