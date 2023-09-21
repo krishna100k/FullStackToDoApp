@@ -12,8 +12,6 @@ function App() {
   const randomNumber = Math.floor(Math.random()*15);
   
   useEffect(() => {
-
-    alert("Please wait for a minute so that the app can connect to the backend")
     
     const getQuote = () => {
       axios.get("https://type.fit/api/quotes").then((response) => {
