@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,10 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    })
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

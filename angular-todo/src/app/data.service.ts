@@ -17,7 +17,7 @@ export class DataService {
   description : string = "";
 
   apiUrl : string = "https://ca71e88f4d474f54ae6f.free.beeceptor.com/api/users/"
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {}
 
   postTodo(title : string, description : string) : Observable<Todo>{
     const body = {
