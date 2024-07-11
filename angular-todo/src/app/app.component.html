@@ -1,10 +1,10 @@
-<div>
-  <input [(ngModel)] = "title" placeholder="title" type="text">
-  <input [(ngModel)] = "description" placeholder="description" type="text">
+<form [formGroup]="submitForm">
+  <input formControlName="Title" placeholder="title" type="text">
+  <input formControlName="Description"  placeholder="description" type="text">
   <button (click)="submitTodo()">Submit</button>
-</div>
+</form>
 
-<div>
+<div >
   <button (click)="increment()">Increment</button>
   <p>{{count$ | async}}</p>
   <button (click)="decrement()">Decrement</button>
