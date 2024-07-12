@@ -1,12 +1,1 @@
-<form [formGroup]="submitForm">
-  <input formControlName="Title" placeholder="title" type="text">
-  <input formControlName="Description"  placeholder="description" type="text">
-  <button (click)="submitTodo()">Submit</button>
-</form>
-
-<div >
-  <button (click)="increment()">Increment</button>
-  <p>{{count$ | async}}</p>
-  <button (click)="decrement()">Decrement</button>
-  <button (click)="reset()">Reset</button>
-</div>
+<router-outlet></router-outlet>

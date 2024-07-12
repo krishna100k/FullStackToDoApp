@@ -1,0 +1,6 @@
+<form [formGroup]="registerForm">
+    <input formControlName = "Username" type="text" placeholder="Username">
+    <input formControlName = "Password" type="text" placeholder="Password">
+    <input [disabled]="!registerForm.valid" (click)="submit()" type="submit" >
+    <a routerLink="/login">Visit Login</a>
+</form>

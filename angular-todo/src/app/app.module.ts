@@ -7,10 +7,16 @@ import { provideHttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
+import { SigninComponent } from './components/signin/signin.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SigninComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
